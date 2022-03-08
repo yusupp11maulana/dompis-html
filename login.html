@@ -7,7 +7,7 @@
     <meta name="author" content="" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    <title>Home || Dompis</title>
+    <title>Dompis</title>
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
@@ -41,31 +41,29 @@
                     <div class="row mt-4">
                       <div class="col">
                         <div class="form-group text-left">
-                          <input type="text" class="form-control rounded-pill" placeholder="Username" />
+                          <input type="text" class="form-control rounded-pill px-3" placeholder="Username" />
                         </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col">
-                        <div class="input-group text-left">
-                          <input type="password" id="pass_log_id" class="form-control rounded-pill" placeholder="Password" />
-                          <button id="pass" class="btn btn-success">test
-                            <span  class="fa fa-fw fa-eye toggle-password"></span>
-                          </button>
+                        <div class="form-group text-left">
+                          <input type="password" id="pass_log_id" class="form-control rounded-pill px-3" placeholder="Password" />
+                            <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
                         </div>
                       </div>
                     </div>
-                    <div class="row mt-4">
+                    <div class="row mt-2">
                       <div class="col">
                         <div class="form-group text-center">
-                          <button class="btn btn-success rounded-pill px-5">LOGIN</button>
+                          <button class="btn btn-outline-success rounded-pill px-5">LOGIN</button>
                         </div>
                       </div>
                     </div>
                     <div class="row mt-4">
                       <div class="col">
                         <div class="text-left">
-                          <h5 class="font-weight-normal">Not have an account?<a href=""> Create an account </a></h5>
+                          <h5 class="font-weight-normal">Not have an account?<a href="register.html"> Create an account </a></h5>
                           </p>
                         </div>
                       </div>
@@ -81,11 +79,7 @@
     </div>
     <!-- ***** Welcome Area End ***** -->
 
-    <script>
-        $('#pass').on('click', function() {
-          alert('test');
-        });
-    </script>
+    
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
 
@@ -101,5 +95,15 @@
 
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
+
+    <script>
+        $(document).on('click', '.toggle-password', function() {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+
+            var input = $("#pass_log_id");
+            input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
+        });
+    </script>
   </body>
 </html>
