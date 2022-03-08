@@ -717,6 +717,18 @@ welcome
   background-size: cover;
   height: 100vh;
 }
+.welcome-area2 {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/banner-bg-3.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
 
 .welcome-area .header-text {
   position: absolute;
@@ -836,6 +848,32 @@ features
 
 .features-small-item:hover .icon {
   background-color: #81c784;
+}
+
+.features-small-item .icon2 {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: auto;
+  position: relative;
+  margin-bottom: 30px;
+  background: #125aa2;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 4%;
+  margin-top: 9px;
+}
+.features-small-item:hover .icon2 {
+  background-color: #3972ab;
 }
 
 .features-small-item .icon {
